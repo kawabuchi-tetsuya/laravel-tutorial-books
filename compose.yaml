@@ -38,6 +38,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: "phpmyadmin_test"
+    platform: linux/x86_64
     restart: unless-stopped
     environment:
       PMA_ARBITRARY: 1
@@ -75,6 +76,7 @@ services:
   mail:
     image: mailhog/mailhog
     container_name: "mailhog"
+    platform: linux/x86_64
     restart: unless-stopped
     ports:
       - 8025:8025
